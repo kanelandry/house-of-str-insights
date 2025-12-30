@@ -124,6 +124,7 @@ Ideas we’re excited about:
 - New PMS adapters
 - Smarter ROI scoring models
 - Scope review analysis using time frames
+- Purchase link enrichment agent to promote items from supply partners
 - Additional upgrade categories
 - UI dashboards
 - Automation hooks
