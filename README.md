@@ -83,14 +83,14 @@ No scraping. Just compliant STR insights at scale.
       "item": "Modern sliding shower door",
       "category": "Aesthetic",
       "reason": "Guests mention outdated bathroom feel",
-      "purchase_link": "EXAMPLE_SHOWER_DOOR_LINK",
+      "purchase_link": "https://www.wayfair.com/Peorsily--56-In.60-In.-W-X-72-In.-H-Double-Sliding-Framed-Shower-Door-In-Matte-Black-With-Clear-Tempered-Glass-SD01BL6072-L6128-K~PORS1002.html",
       "roi_impact": 8
     },
     {
       "item": "Dedicated coffee bar station",
       "category": "Operational",
       "reason": "Guests love coffee but request better setup",
-      "purchase_link": "EXAMPLE_IKEA_COFFEE_BAR_LINK",
+      "purchase_link": "https://www.bedbathandbeyond.com/c/dining-furniture/buffets-sideboards?t=24420&featuredproduct=40833018",
       "roi_impact": 7
     }
   ],
