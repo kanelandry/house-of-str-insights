@@ -6,16 +6,16 @@ Turn short-term rental reviews into AI-driven retrospectives with exact upgrade 
 
 ## Table of Contents
 
-1. Overview
-2. Key Features
-3. Feature Matrix
-4. How It Works
-5. Example Output
-6. Installation
-7. Usage
-8. Roadmap
-9. Contributing
-10. License
+1. [Overview](#overview)
+2. [Key Features](#key-features)
+3. [Feature Matrix](#feature-matrix)
+4. [How It Works](#how-it-works)
+5. [Example Output](#example-output)
+6. [Installation](#installation)
+7. [Usage](#usage)
+8. [Roadmap](#roadmap)
+9. [Contributing](#contributing)
+10. [License](#license)
 
 ## Overview
 
