@@ -1,6 +1,6 @@
 # House of STR Insights
 
-Turn short-term rental reviews into AI-driven retrospectives with exact upgrade recommendations, purchase links, and revenue-lift ROI scoring - works across any PMS with a single config change.
+Turn short-term rental reviews into AI-driven retrospectives with exact upgrade recommendations, purchase links, and revenue-lift ROI scoring - works across any Property Management System (PMS) with a single config change.
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-lightgrey)
 
@@ -56,18 +56,22 @@ No scraping. Just compliant STR insights at scale.
 | Output Format	| Console JSON, ready for dashboards, BI, or automation |
 
 ## How It Works
-1. Pull reviews from selected PMS API
-2. Group reviews by property/listing
-3. Send reviews to OpenAI for analysis
-4. Extract:
-  - sentiment score & label
-  - operational issues
-  - aesthetic suggestions
-  - upgrade ideas + purchase links
-  - ROI impact score
-5. Generate retrospective summary
-6. Rank top portfolio upgrades
-7. Print JSON to console
+1. **Select a PMS provider** in the global config (``PMS_PROVIDER`` variable).
+2. The main runner (``src/index.py``) calls the **PMS adapter index**, which loads the correct adapter dynamically.
+3. The adapter fetches guest reviews using the **official PMS API** (Guesty by default).
+4. Reviews are grouped by ``listingId`` and ratings are aggregated.
+5. Each listing’s review batch is sent to **OpenAI GPT** for analysis via a centralized OpenAI client.
+6. The AI extracts:
+    - Sentiment score and label (Positive/Mixed/Negative)
+    - Top 3 guest-praised features
+    - Operational and aesthetic upgrade suggestions
+    - Closest purchase links for recommended items
+    - Estimated **ROI revenue-lift impact score (1–10)** per improvement area
+    - Estimated revenue-lift percentage per upgrade category
+    - 2-sentence investment-focused retrospective summary
+7. Reviews are also written to **CSV format** under ``/data/reviews.csv`` using the CSV writer utility.
+8. After processing all listings, the script outputs a **portfolio-wide ranking of top revenue-impact upgrades by average ROI score**.
+9. A final structured **dashboard-ready JSON** result prints to the console for BI tools, STR apps, or automation pipelines.
 
 ## Example Output
 ```json
@@ -119,6 +123,7 @@ We welcome contributions!
 Ideas we’re excited about:
 - New PMS adapters
 - Smarter ROI scoring models
+- Scope review analysis using time frames
 - Additional upgrade categories
 - UI dashboards
 - Automation hooks
